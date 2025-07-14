@@ -11,7 +11,11 @@ namespace MauiChat
             InitializeComponent();             
             CultureInfo.CurrentUICulture = new CultureInfo("fr-FR");   
             SfChatResources.ResourceManager = new ResourceManager("MauiChat.Resources.SfChat", Application.Current!.GetType().Assembly);
-            MainPage = new MainPage();
+        }
+
+        protected override Window CreateWindow(IActivationState? activationState)
+        {
+            return new Window(new MainPage());
         }
     }
 }
