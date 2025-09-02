@@ -2,6 +2,21 @@
 
 This repository contains a sample demonstrating how to use localization in .NET MAUI Chat (SfChat).
 
+## Sample
+
+```xaml
+
+App.xaml.cs:
+
+        public App()
+        {
+            InitializeComponent();             
+            CultureInfo.CurrentUICulture = new CultureInfo("fr-FR");   
+            SfChatResources.ResourceManager = new ResourceManager("MauiChat.Resources.SfChat", Application.Current!.GetType().Assembly);
+            MainPage = new MainPage();
+        }
+
+```
 ## Requirements to run the demo
 
 To run the demo, refer to [System Requirements for .NET MAUI](https://help.syncfusion.com/maui/system-requirements)
